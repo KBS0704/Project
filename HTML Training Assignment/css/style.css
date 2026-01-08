@@ -35,3 +35,6 @@
   .css-active{
     background-color: rgba(255, 0, 0, 0.1) !important;
   }
+  .css-yearly{
+    text-underline-offset: 10px !important;
+  }
