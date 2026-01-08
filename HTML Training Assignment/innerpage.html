@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+</head>
+<body class="vh-100" style="background-color: #FAFAFA;">
+  <!-- Header -->
+
+  <header>
+    <!-- Left part -->
+    <nav class="navbar navbar-expand-lg px-2 py-3 bg-white ">
+      <div class="container-fluid">
+    
+        <img src="images/menu-bar.svg" class="pe-2"/>
+        <div class="nav-item">
+          <img src="images/header-logo.svg" class="pe-md-5 me-md-5"/>
+        </div>
+    
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse">  
+          <ul class="navbar-nav d-flex align-items-center gap-3">
+            <li class="nav-item navbarSupportedContent">
+              <form class="d-flex">
+                <div class="form-group has-search ">
+                  <img src="images/search-icon.svg" class=" form-control-feedback mt-2 ms-1" width="20px" height="20px"/>
+                  <input type="text" class="form-control border-0 fs-6 fw-semibold " placeholder="Search">
+              </div>
+              </form>
+            </li>
+          </ul>
+    
+          <!-- Right part -->
+          <ul class="navbar-nav ms-auto d-flex align-items-center gap-4 navbarSupportedContent">
+            <li><img src="images/notification-icon.svg" class="me-4"/></li>
+            <li><img src="images/profile.png" class="me-auto"/></li>
+            <li><h4 class="mb-0 ms-auto">John Doe</h4></li>
+            <li><img src="images/select-downward.svg" class="text-black ms-0" width="20px" height="20px"/></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+   <!-- Side nav bar -->
+
+   <div class="row vh-100">
+    <aside class="top-10 start-0 h-100 bg-white col-2 " style="width: 250px;">
+      <ul class="nav flex-column bg-white d-flex align-content-start W-100">
+        <li class="nav-item ">
+          <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-semibold bg-danger css-active rounded-2" href="#">
+            <img src="images/dashboard-active.svg" class="mb-1 me-1" height="22px" width="22px" >
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item W-100">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/graph-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Analysis
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/inbox-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Inbox
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/clock-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            History
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/user-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Users
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/maintenance-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Maintenance
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/setting-default.svg" height="22px" class="mb-1" width="22px">
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+  
+    <!-- Content -->
+  
+    <div class="col-10">
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

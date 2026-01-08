@@ -4,42 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <style>
-      .has-search{
-        position: relative;
-      }
-      .has-search .form-control {
-        padding-left: 2.375rem;
-      }
-      .has-search .form-control-feedback {
-        position: absolute;
-        z-index: 2;
-        display: block;
-        text-align: center;
-        pointer-events: none;
-        color: #aaa;
-      }
-      .side-nav-hover:hover{
-        background-color: rgba(255, 0, 0, 0.1);
-      }
-      .hover-effect:hover{
-        text-decoration: underline !important;
-        color: red !important;
-        text-underline-offset: 10px !important;
-      }
-      .paid{
-        color: green !important;
-        background-color: rgba(80, 230, 21, 0.2) !important;
-      }
-      .unpaid{
-        color: red !important;
-        background-color: rgba(219, 17, 17, 0.2) !important;
-      }
-      .pending{
-        color:gray !important;
-        background-color: rgba(145, 151, 145, 0.1) !important;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
     <title>Dashboard</title>
 </head>
 <body class="vh-100" style="background-color: #FAFAFA;">
@@ -63,7 +28,7 @@
     
         <div class="collapse navbar-collapse">  
           <ul class="navbar-nav d-flex align-items-center gap-3">
-            <li class="nav-item"  class="navbarSupportedContent">
+            <li class="nav-item navbarSupportedContent">
               <form class="d-flex">
                 <div class="form-group has-search ">
                   <img src="images/search-icon.svg" class=" form-control-feedback mt-2 ms-1" width="20px" height="20px"/>
@@ -91,7 +56,7 @@
     <aside class="top-10 start-0 h-100 bg-white col-2 " style="width: 250px;">
       <ul class="nav flex-column bg-white d-flex align-content-start W-100">
         <li class="nav-item ">
-          <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-semibold bg-danger bg-opacity-25 rounded-2" href="#">
+          <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-semibold bg-danger css-active rounded-2" href="#">
             <img src="images/dashboard-active.svg" class="mb-1 me-1" height="22px" width="22px" >
             Dashboard
           </a>
@@ -224,132 +189,132 @@
 
       <div class="d-flex justify-content-between mt-5 bg-white">
         <h4>Invoices</h4>
-        <a href="" class="text-danger">View all</a>
+        <a href="" class="text-danger text-decoration-none">View all</a>
       </div>
 
-      <table class="table">
+      <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">INVOICE</th>
-            <th scope="col">COMPANY</th>
-            <th scope="col">MAIL</th>
-            <th scope="col">DUE DATE</th>
-            <th scope="col">STATUS</th>
-            <th scope="col">AMOUNT</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">INVOICE</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">COMPANY</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">MAIL</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">DUE DATE</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">STATUS</th>
+            <th scope="col" class="text-body-tertiary opacity-75 fw-medium">AMOUNT</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">651535</th>
+            <th scope="row" class="fw-normal">651535</th>
             <td>Public Adjusting Firm</td>
             <td>georgia.young@example.com</td>
             <td>24May, 2020</td>
             <td>
               <span class="paid rounded-2 px-2 py-1">
-                paid
+                Paid
               </span>
             </td>
             <td>$47,800</td>
           </tr>
           <tr>
-            <th scope="row">651536</th>
+            <th scope="row" class="fw-normal">651536</th>
             <td>Blue Ocean Technologies</td>
             <td>michael.smith@example.com</td>
             <td>10Jun, 2020</td>
             <td>
-              <span class="unpaid rounded-pill">
-                unpaid
+              <span class="unpaid rounded-2 px-2 py-1">
+                Failed
               </span>
             </td>
             <td>$12,450</td>
           </tr>
           
           <tr>
-            <th scope="row">651537</th>
+            <th scope="row" class="fw-normal">651537</th>
             <td>Green Field Solutions</td>
             <td>emma.wilson@example.com</td>
             <td>18Jun, 2020</td>
             <td>
-              <span  class="paid rounded-pill">
-                paid
+              <span  class="paid rounded-2 px-2 py-1">
+                Paid
               </span>
             </td>
             <td>$8,900</td>
           </tr>
           
           <tr>
-            <th scope="row">651538</th>
+            <th scope="row" class="fw-normal">651538</th>
             <td>NextGen Software</td>
             <td>oliver.brown@example.com</td>
             <td>25Jun, 2020</td>
             <td>
-              <span class="pending rounded-pill">
-                pending
+              <span class="pending rounded-2 px-2 py-1">
+                Pending
               </span>
             </td>
             <td>$22,300</td>
           </tr>
           
           <tr>
-            <th scope="row">651539</th>
+            <th scope="row" class="fw-normal">651539</th>
             <td>Urban Construction Ltd</td>
             <td>sophia.jones@example.com</td>
             <td>02Jul, 2020</td>
             <td>
-              <span class="paid rounded-pill">
-                paid
+              <span class="paid rounded-2 px-2 py-1">
+                Paid
               </span>
             </td>
             <td>$55,120</td>
           </tr>
           
           <tr>
-            <th scope="row">651540</th>
+            <th scope="row" class="fw-normal">651540</th>
             <td>Alpha Marketing Agency</td>
             <td>liam.miller@example.com</td>
             <td>09Jul, 2020</td>
             <td>
-              <span class="unpaid rounded-pill">
-                unpaid
+              <span class="unpaid rounded-2 px-2 py-1">
+                Failed
               </span>
             </td>
             <td>$6,750</td>
           </tr>
           
           <tr>
-            <th scope="row">651541</th>
+            <th scope="row" class="fw-normal">651541</th>
             <td>Sunrise Healthcare</td>
             <td>ava.taylor@example.com</td>
             <td>15Jul, 2020</td>
             <td >
-              <span class="paid rounded-pill">
-                paid
+              <span class="paid rounded-2 px-2 py-1">
+                Paid
               </span>
             </td>
             <td>$31,400</td>
           </tr>
           
           <tr>
-            <th scope="row">651542</th>
+            <th scope="row" class="fw-normal">651542</th>
             <td>Peak Logistics</td>
             <td>noah.anderson@example.com</td>
             <td>22Jul, 2020</td>
             <td>
-              <span class="pending rounded-pill">
-                pending
+              <span class="pending rounded-2 px-2 py-1">
+                Pending
               </span>
           </td>
             <td>$14,980</td>
           </tr>
           
           <tr>
-            <th scope="row">651543</th>
+            <th scope="row" class="fw-normal">651543</th>
             <td>Visionary Designs</td>
             <td>isabella.thomas@example.com</td>
             <td>30Jul, 2020</td>
             <td>
-              <span class="unpaid rounded-pill">
-                unpaid
+              <span class="unpaid rounded-2 px-2 py-1">
+                Failed
               </span>
             </td>
             <td>$9,600</td>
@@ -360,9 +325,6 @@
 
     </div>
   </div>
-
-
-
-  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

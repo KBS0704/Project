@@ -1,0 +1,37 @@
+.has-search{
+    position: relative;
+  }
+  .has-search .form-control {
+    padding-left: 2.375rem;
+  }
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+  .side-nav-hover:hover{
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  .hover-effect:hover{
+    text-decoration: underline !important;
+    color: red !important;
+    text-underline-offset: 10px !important;
+  }
+  .paid{
+    color: #3CDD5F !important;
+    background-color: #EBFFEF !important;
+  }
+  .unpaid{
+    color: #FF4545 !important;
+    background-color:#FFF5F5!important;
+  }
+  .pending{
+    color:#BABABA!important;
+    background-color:  #F8F8F8 !important;
+  }
+  .css-active{
+    background-color: rgba(255, 0, 0, 0.1) !important;
+  }
