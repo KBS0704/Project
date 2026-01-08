@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+      .has-search{
+        position: relative;
+      }
+      .has-search .form-control {
+        padding-left: 2.375rem;
+      }
+      .has-search .form-control-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+      }
+      .side-nav-hover:hover{
+        background-color: rgba(255, 0, 0, 0.1);
+      }
+      .hover-effect:hover{
+        text-decoration: underline !important;
+        color: red !important;
+        text-underline-offset: 10px !important;
+      }
+      .paid{
+        color: green !important;
+        background-color: rgba(80, 230, 21, 0.2) !important;
+      }
+      .unpaid{
+        color: red !important;
+        background-color: rgba(219, 17, 17, 0.2) !important;
+      }
+      .pending{
+        color:gray !important;
+        background-color: rgba(145, 151, 145, 0.1) !important;
+      }
+    </style>
+    <title>Dashboard</title>
+</head>
+<body class="vh-100" style="background-color: #FAFAFA;">
+  <!-- Header -->
+
+  <header>
+    <!-- Left part -->
+    <nav class="navbar navbar-expand-lg px-2 py-3 bg-white ">
+      <div class="container-fluid">
+    
+        <img src="images/menu-bar.svg" class="pe-2"/>
+        <div class="nav-item">
+          <img src="images/header-logo.svg" class="pe-md-5 me-md-5"/>
+        </div>
+    
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse">  
+          <ul class="navbar-nav d-flex align-items-center gap-3">
+            <li class="nav-item"  class="navbarSupportedContent">
+              <form class="d-flex">
+                <div class="form-group has-search ">
+                  <img src="images/search-icon.svg" class=" form-control-feedback mt-2 ms-1" width="20px" height="20px"/>
+                  <input type="text" class="form-control border-0 fs-6 fw-semibold " placeholder="Search">
+              </div>
+              </form>
+            </li>
+          </ul>
+    
+          <!-- Right part -->
+          <ul class="navbar-nav ms-auto d-flex align-items-center gap-4 navbarSupportedContent">
+            <li><img src="images/notification-icon.svg" class="me-4"/></li>
+            <li><img src="images/profile.png" class="me-auto"/></li>
+            <li><h4 class="mb-0 ms-auto">John Doe</h4></li>
+            <li><img src="images/select-downward.svg" class="text-black ms-0" width="20px" height="20px"/></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Side nav bar -->
+
+  <div class="row vh-100">
+    <aside class="top-10 start-0 h-100 bg-white col-2 " style="width: 250px;">
+      <ul class="nav flex-column bg-white d-flex align-content-start W-100">
+        <li class="nav-item ">
+          <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-semibold bg-danger bg-opacity-25 rounded-2" href="#">
+            <img src="images/dashboard-active.svg" class="mb-1 me-1" height="22px" width="22px" >
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item W-100">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/graph-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Analysis
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/inbox-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Inbox
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/clock-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            History
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/user-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Users
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/maintenance-default.svg" class="mb-1 me-1" height="22px" width="22px">
+            Maintenance
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+            <img src="images/setting-default.svg" height="22px" class="mb-1" width="22px">
+            Setting
+          </a>
+        </li>
+      </ul>
+    </aside>
+  
+    <!-- Content -->
+  
+    <div class="col-10">
+      <span class="fs-2 fw-bold mt-5 p-5">Dashboard</span>
+
+      <!-- First line -->
+  
+      <div class="d-flex justify-content-between pt-5 ">
+        <div class="d-flex justify-content-between bg-white p-3 rounded-3">
+          <img src="images/star.svg" height="40px" width="40px" >
+          <div class="ps-2">
+            <h3>23,456</h3>
+            <div>New Products</div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-white p-3 rounded-3">
+          <img src="images/new-product.svg" height="40px" width="40px">
+          <div class="ps-2">
+            <h3>2345</h3>
+            <div>Added Products</div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-white p-3 rounded-3">
+          <img src="images/total-product.svg" height="40px" width="40px" >
+          <div class="ps-2">
+            <h3>32,456</h3>
+            <div>Total Products</div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between bg-white p-3 rounded-3">
+          <img src="images/dollar-filled.svg" height="40px" width="40px" >
+          <div class="ps-2">
+          <h3>5678</h3>
+          <div>Today's Sale</div>
+        </div>
+      </div>
+        <div class="d-flex justify-content-between bg-white p-3 rounded-3">
+          <img src="images/money-bag.svg" height="40px" width="40px" >
+          <div class="ps-2">
+            <h3>33,5342</h3>
+            <div>Total Sale</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graph -->
+
+      <div class="d-flex justify-content-between mt-5 bg-white">
+        <div class="ps-4">
+          <div class="d-flex justify-content-between mb-4 ">
+            <h4>Sale</h4>
+            <div>
+              <a href="" class="p-2 text-body-tertiary text-decoration-none icon-link-hover hover-effect">Weekly</a>
+              <a href="" class="p-2 text-body-tertiary text-decoration-none icon-link-hover hover-effect">Monthly</a>
+              <a href="" class="p-2 text-body-tertiary text-decoration-none icon-link-hover hover-effect">Yearly</a>
+            </div>
+          </div>
+          <img src="images/data-graph.png">
+        </div>
+        <div class="me-5 px-5">
+          <h4 class="me-4 pb-1">Sales by Country</h4>
+          <img src="images/pie-chart.svg">
+          <div class="d-flex justify-content-between mt-3">
+            <div class="mb-1">
+              <div class="rounded-circle d-inline-block" style="height: 15px; width: 15px; background-color: red;"></div>
+              United States Of America
+            </div>
+            <div>
+              <div class="rounded-circle d-inline-block ms-5" style="height: 15px; width: 15px; background-color: #A2B86C;"></div>
+              Canada
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="rounded-circle d-inline-block" style="height: 15px; width: 15px; background-color: #F16C20;"></div>
+              Russia
+            </div>
+            <div class="me-3">
+              <div class="rounded-circle d-inline-block" style="height: 15px; width: 15px; background-color: #EBC844;"></div>
+              India
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+
+      <div class="d-flex justify-content-between mt-5 bg-white">
+        <h4>Invoices</h4>
+        <a href="" class="text-danger">View all</a>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">INVOICE</th>
+            <th scope="col">COMPANY</th>
+            <th scope="col">MAIL</th>
+            <th scope="col">DUE DATE</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">651535</th>
+            <td>Public Adjusting Firm</td>
+            <td>georgia.young@example.com</td>
+            <td>24May, 2020</td>
+            <td>
+              <span class="paid rounded-2 px-2 py-1">
+                paid
+              </span>
+            </td>
+            <td>$47,800</td>
+          </tr>
+          <tr>
+            <th scope="row">651536</th>
+            <td>Blue Ocean Technologies</td>
+            <td>michael.smith@example.com</td>
+            <td>10Jun, 2020</td>
+            <td>
+              <span class="unpaid rounded-pill">
+                unpaid
+              </span>
+            </td>
+            <td>$12,450</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651537</th>
+            <td>Green Field Solutions</td>
+            <td>emma.wilson@example.com</td>
+            <td>18Jun, 2020</td>
+            <td>
+              <span  class="paid rounded-pill">
+                paid
+              </span>
+            </td>
+            <td>$8,900</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651538</th>
+            <td>NextGen Software</td>
+            <td>oliver.brown@example.com</td>
+            <td>25Jun, 2020</td>
+            <td>
+              <span class="pending rounded-pill">
+                pending
+              </span>
+            </td>
+            <td>$22,300</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651539</th>
+            <td>Urban Construction Ltd</td>
+            <td>sophia.jones@example.com</td>
+            <td>02Jul, 2020</td>
+            <td>
+              <span class="paid rounded-pill">
+                paid
+              </span>
+            </td>
+            <td>$55,120</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651540</th>
+            <td>Alpha Marketing Agency</td>
+            <td>liam.miller@example.com</td>
+            <td>09Jul, 2020</td>
+            <td>
+              <span class="unpaid rounded-pill">
+                unpaid
+              </span>
+            </td>
+            <td>$6,750</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651541</th>
+            <td>Sunrise Healthcare</td>
+            <td>ava.taylor@example.com</td>
+            <td>15Jul, 2020</td>
+            <td >
+              <span class="paid rounded-pill">
+                paid
+              </span>
+            </td>
+            <td>$31,400</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651542</th>
+            <td>Peak Logistics</td>
+            <td>noah.anderson@example.com</td>
+            <td>22Jul, 2020</td>
+            <td>
+              <span class="pending rounded-pill">
+                pending
+              </span>
+          </td>
+            <td>$14,980</td>
+          </tr>
+          
+          <tr>
+            <th scope="row">651543</th>
+            <td>Visionary Designs</td>
+            <td>isabella.thomas@example.com</td>
+            <td>30Jul, 2020</td>
+            <td>
+              <span class="unpaid rounded-pill">
+                unpaid
+              </span>
+            </td>
+            <td>$9,600</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
