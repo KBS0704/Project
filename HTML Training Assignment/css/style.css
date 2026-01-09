@@ -1,4 +1,7 @@
-.has-search{
+body{
+  font-family: Arial, Helvetica, sans-serif;
+ }
+ .has-search{
     position: relative;
   }
   .has-search .form-control {
@@ -38,3 +41,42 @@
   .css-yearly{
     text-underline-offset: 10px !important;
   }
+  /* .nav-hover:hover{
+    color: red !important;
+    text-decoration:underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 20px;
+  } */
+  /* .form-outline .form-control:focus {
+    border:2px solid #ff4d4f !important;
+    box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
+  }
+
+*/
+/*  
+  input:focus + label{
+    background-color: white;
+    z-index: 5;
+    color: red !important;
+    padding: 0 5px;
+  }
+
+  input:focus{
+    border: 2px solid red !important;
+  }
+   
+  .form-outline {
+    border: none !important;
+    border: 1px solid red !important;
+
+  }
+    */
+    .nav-hover{
+      margin-bottom: 3px;
+    }
+
+    .nav-hover:hover{
+      margin-bottom: 0px;
+      border-bottom: 3px solid red ;
+      color: red !important;
+    }
