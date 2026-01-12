@@ -41,7 +41,18 @@ body{
   .css-yearly{
     text-underline-offset: 10px !important;
   }
-  /* .nav-hover:hover{
+  .form-check-input[type=radio]{
+    background-color: #FF4545 !important;
+    border-color: #FF4545 !important;
+    box-shadow: none !important;
+  }
+  .notification{
+    box-shadow: none;
+  }
+  .header{
+    box-shadow: none
+  }
+    /* .nav-hover:hover{
     color: red !important;
     text-decoration:underline;
     text-decoration-thickness: 3px;
@@ -51,7 +62,7 @@ body{
     border:2px solid #ff4d4f !important;
     box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;
   }
-
+ 
 */
 /*  
   input:focus + label{
@@ -60,7 +71,7 @@ body{
     color: red !important;
     padding: 0 5px;
   }
-
+ 
   input:focus{
     border: 2px solid red !important;
   }
@@ -68,15 +79,60 @@ body{
   .form-outline {
     border: none !important;
     border: 1px solid red !important;
-
+ 
   }
     */
     .nav-hover{
       margin-bottom: 3px;
     }
-
+ 
     .nav-hover:hover{
       margin-bottom: 0px;
       border-bottom: 3px solid red ;
       color: red !important;
     }
+ 
+      /* Mobile sidebar toggle */
+      @media (max-width: 991.98px) {
+        .sidebar {
+          position: fixed;
+          top: 70px;
+          left: -250px;
+          width: 250px;
+          height: calc(100vh - 70px);
+          transition: left 0.3s ease;
+          z-index: 1000;
+        }
+        .sidebar.show {
+          left: 0;
+        }
+        .content-area {
+          margin-left: 0 !important;
+        }
+      }
+     
+      @media (min-width: 992px) {
+        .sidebar {
+          position: fixed;
+          top: 70px;
+          left: 0;
+          width: 250px;
+          height: calc(100vh - 70px);
+          overflow-y: auto;
+        }
+        .content-area {
+          margin-left: 250px;
+        }
+      }
+
+      /*Tab active*/
+      .nav-link.nav-hover.active {
+        color: red !important;
+        border-bottom: 3px solid red;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      
+      .nav-link.nav-hover:hover {
+        color: red;
+      }

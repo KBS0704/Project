@@ -8,330 +8,382 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet"/>
-    
-</head>
-
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
+ 
 <body class="vh-100" style="background-color: #FAFAFA;">
-
+ 
   <!-- Header -->
-
   <header>
-    <!-- Left part -->
-    <nav class="navbar navbar-expand-lg px-2 py-3 bg-white fixed-top" style="box-shadow: none;" >
+    <nav class="navbar navbar-expand-lg px-2 py-3 bg-white fixed-top header">
       <div class="container-fluid">
-    
-        <img src="images/menu-bar.svg" class="pe-2"/>
+        <button class="navbar-toggler border-0 p-0 me-2" type="button" id="sidebarToggle">
+          <img src="images/menu-bar.svg" class="pe-2"/>
+        </button>
+       
         <div class="nav-item">
-          <img src="images/header-logo.svg" class="pe-md-5 me-md-5"/>
+          <img src="images/header-logo.svg" class="pe-md-5 me-md-5" style="max-width: 220px;max-height: 50px;"/>
         </div>
-    
-        <button class="navbar-toggler" type="button"
-          data-bs-toggle="collapse"
-          data-bs-target=".navbarSupportedContent">
+   
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
           <span class="navbar-toggler-icon"></span>
         </button>
-    
-        <div class="collapse navbar-collapse">  
-          <ul class="navbar-nav d-flex align-items-center gap-3">
-            <li class="nav-item navbarSupportedContent">
+   
+        <div class="collapse navbar-collapse" id="navbarContent">  
+          <ul class="navbar-nav d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <li class="nav-item w-100">
               <form class="d-flex">
-                <div class="form-group has-search ">
-                  <img src="images/search-icon.svg" class=" form-control-feedback mt-2 ms-1" width="20px" height="20px"/>
-                  <input type="text" class="form-control border-0 fs-6 fw-semibold " placeholder="Search">
-              </div>
+                <div class="form-group has-search w-100">
+                  <img src="images/search-icon.svg" class="form-control-feedback mt-2 ms-1" width="20px" height="20px"/>
+                  <input type="text" class="form-control border-0 fs-6 fw-semibold" placeholder="Search">
+                </div>
               </form>
             </li>
           </ul>
-    
-          <!-- Right part -->
-          <ul class="navbar-nav ms-auto d-flex align-items-center gap-4 navbarSupportedContent">
-            <li><img src="images/notification-icon.svg" class="me-4"/></li>
-            <li><img src="images/profile.png" class="me-auto"/></li>
-            <li><h4 class="mb-0 ms-auto">John Doe</h4></li>
+   
+          <ul class="navbar-nav ms-auto d-flex align-items-center gap-3 gap-lg-4 mt-3 mt-lg-0">
+            <li>
+              <div class="dropdown">
+                <button class="btn notification" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="images/notification-icon.svg" class="me-0 me-lg-4 "/>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div></li>
+            <li><img src="images/profile.png" class="me-0"/></li>
+            <li><h4 class="mb-0 ms-0 ms-lg-auto d-none d-sm-block">John Doe</h4></li>
             <li><img src="images/select-downward.svg" class="text-black ms-0" width="20px" height="20px"/></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-
+ 
   <!-- Side nav bar -->
-
-  <div class="row vh-100 mt-5 pt-5">
-    <aside class="top-10 start-0 h-100 bg-white col-2 " style="width: 250px;">
-      <ul class="nav flex-column bg-white d-flex align-content-start w-100">
-        <li class="nav-item ">
-          <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-semibold bg-danger css-active rounded-2" href="#">
-            <img src="images/dashboard-active.svg" class="mb-1 me-1" height="22px" width="22px" >
-            Dashboard
-          </a>
-        </li>
-        <li class="nav-item W-100">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/graph-default.svg" class="mb-1 me-1" height="22px" width="22px">
-            Analysis
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/inbox-default.svg" class="mb-1 me-1" height="22px" width="22px">
-            Inbox
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/clock-default.svg" class="mb-1 me-1" height="22px" width="22px">
-            History
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/user-default.svg" class="mb-1 me-1" height="22px" width="22px">
-            Users
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/maintenance-default.svg" class="mb-1 me-1" height="22px" width="22px">
-            Maintenance
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
-            <img src="images/setting-default.svg" height="22px" class="mb-1" width="22px">
-            Setting
-          </a>
-        </li>
-      </ul>
-    </aside>
-  
-<!-- Content -->
-            <main class="col-md-10 p-4">
-                <h2 class="mb-5 pt-3 fw-bold">Analysis</h2>
-
-                <form class="mt-3 ms-5">
-                    <div class="mb-5">
-                        <h4 class="mb-3 fw-bold g-5">One Column</h4>
-                        
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" id="name1" class="form-control form-control-lg"/>
-                            <label class="form-label text-secondary" for="name1">Name</label>
-                        </div>
-
-                        <select class="form-select mb-4 form-select-lg">
-                            <option selected class="text-danger">Dropdown</option>
-                            <option value="1">Option One</option>
-                            <option value="2">Option Two</option>
-                        </select>
-
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <textarea class="form-control form-control-lg" id="textArea1" rows="4"></textarea>
-                            <label class="form-label" for="textArea1">Multiple line</label>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="mb-3 fw-bold">Two Column</h4>
-                        <div class="row g-5">
-                            <div class="col-md-6">
-                                <div class="form-outline mb-4" data-mdb-input-init>
-                                    <input type="text" id="nameCol1" class="form-control form-control-lg" />
-                                    <label class="form-label" for="nameCol1">Name</label>
-                                </div>
-                                <div class="form-outline mb-4" data-mdb-input-init>
-                                    <input type="password" id="passCol1" class="form-control form-control-lg" />
-                                    <label class="form-label" for="passCol1">Password</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-outline mb-4" data-mdb-input-init>
-                                    <input type="text" id="nameCol2" class="form-control form-control-lg" />
-                                    <label class="form-label" for="nameCol2">User Name</label>
-                                </div>
-                                <select class="form-select mb-4 form-select-lg">
-                                    <option selected>Dropdown</option>
-                                    <option value="1">Selection A</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                      <h4 class="mb-3 fw-bold g-5">Three Column</h4>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" id="focus" class="form-control form-control-lg" />
-                            <label class="form-label" for="focus">Focus</label>
-                          </div>
-                       </div>
-                        <div class="col-md-4">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="password" id="passCol3" class="form-control form-control-lg" />
-                            <label class="form-label" for="passCol3">Password</label>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" id="disable" class="form-control bg-white form-control-lg" style="border: 2px dotted gray;z-index: 0;" value="John Doe" disabled/>
-                            <label class="form-label z-1 bg-white" for="disable">Disabled</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 class="mb-3 fw-bold">
-                        Four Column
-                      </h4>
-                      <div class="row g-5">
-                        <div class="col-md-3">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" id="designation" class="form-control form-control-lg" />
-                            <label class="form-label" for="designation">Designation</label>
-                            <div class="invalid-feedback">
-                              Enter valid data
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" id="namecol4" class="form-control form-control-lg" />
-                            <label class="form-label" for="namecol4">Name</label>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <div class="form-outline mb-4" data-mdb-input-init>
-                              <input type="text" id="nameCol4" class="form-control form-control-lg" />
-                              <label class="form-label" for="nameCol4">Username</label>
-                          </div>
-                        </div>
-                        <div class="col-md-3">
-                          <select class="form-select mb-4 form-select-lg">
-                            <option selected>Select</option>
-                            <option value="1">Selection A</option>
-                        </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 class="fw-bold mt-2">Other Design Elements</h4>
-                      <div class="mt-4">
-                        <h5>File Upload</h5>
-                        <div class="file-upload-wrapper fw-bold mt-3">
-                          <input type="file" id="customFile" class="hidden-input" hidden />
-                          
-                          <label class="btn btn-outline-danger btn-rounded fw-bold" for="customFile">
-                            <img src="images/cloud-upload-icon.svg" height="25px" width="25px"> Upload
-                          </label>
-                          
-                          <span id="file-chosen" class="ms-2 pb-5 text-secondary fw-normal">No items selected</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mt-4">
-                      <h5>Radio Button</h5>
-                      <div class="form-check col-1 ms-3">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label" for="exampleRadios1">
-                          Option 1
-                        </label>
-                      </div>
-                      <div class="form-check col-1 ms-3">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                          Option 2
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="row mt-4">
-                      <h5>Checkbox</h5>
-                      <div class="form-check col-1 ms-3">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled checked>
-                        <label class="form-check-label" for="defaultCheck1">
-                          Option 1
-                        </label>
-                      </div>
-                      <div class="form-check col-1 ms-3">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" checked>
-                        <label class="form-check-label" for="defaultCheck2">
-                          Option 2
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="mt-4">
-                      <h5>Snackbar</h5>
-                      <div class="row g-5">
-                        <div class="col-md-6">
-                          <div class="alert alert-danger bg-white border-danger border-1 border p-2 " role="alert">
-                            <a href="#" class="alert-link fw-medium" style="color: #FF3535;">
-                              <img src="images/error-icon.svg" height="20px" width="20px">
-                              This is an error Message</a>
-                          </div>
-                          <div class="alert alert-warning bg-white border-warning border-1 border p-2" role="alert">
-                            <a href="#" class="alert-link fw-medium" style="color: #FFA800;">
-                              <img src="images/warning-icon.svg" height="20px" width="20px">
-                              This is a warning message!</a>
-                          </div>
-                        </div>
-
-                        <div class="col-md-6">
-                          <div class="alert alert-primary bg-white border-info border-1 border p-2" role="alert">
-                            <a href="#" class="alert-link fw-medium" style="color: #00B9E1;">
-                              <img src="images/info-icon.svg" height="20px" width="20px">
-                              This is an information message!</a>
-                          </div>
-                          <div class="alert alert-success bg-white border-success border-1 border p-2" role="alert">
-                            <a href="#" class="alert-link fw-medium" style="color: #00AF27;">
-                              <img src="images/success-icon.svg" height="20px" width="20px">
-                              This is a success message!</a>
-                          </div>                          
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="mt-4">
-                      <h5>Call to action</h5>
-                      <div class="row mt-3">
-                        <div class="col-1">
-                          <button type="button" class="btn btn-danger rounded-pill px-4 py-2 me-3 fs-6">Primary</button>
-                        </div>
-                        <div class="col-1">
-                          <button type="button" class="btn btn-outline-danger rounded-pill px-4 py-2 ms-3 fs-6">Secondary</button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="mt-4">
-                      <h5>Tabs</h5>
-                      <div class="row">
-                        <ul class="nav">
-                          <li class="nav-item">
-                            <a class="nav-link nav-hover fw-bold px-3" style="color: #ADADAD;" href="#">Tab 1</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link nav-hover fw-bold px-3" style="color: #ADADAD;" href="#">Tab 2</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link nav-hover fw-bold px-3" style="color: #ADADAD;" href="#">Tab 3</a>
-                          </li>
-                        </ul>
-                        <hr class="text-secondary pt-1">
-                      </div> 
-                    </div>
-
-                    <div class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem a libero voluptate et dolor, saepe voluptatum reprehenderit temporibus voluptas fugiat cupiditate in quia quo eos eaque ullam perspiciatis beatae!
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatibus expedita ex voluptates labore ad perspiciatis, repellat vero aliquam corporis ducimus, quasi deleniti sunt? Obcaecati eius temporibus quaerat omnis voluptatem!
-                    </div>
-                </form>
-            </main>
+  <aside class="sidebar bg-white" id="sidebar" style="overflow-y: auto;">
+    <ul class="nav flex-column bg-white d-flex align-content-start w-100">
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="dashboard.html">
+          <img src="images/dashboard-default.svg" class="mb-1 me-1" height="22px" width="22px">
+          Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-danger side-nav-hover fs-6 w-100 m-3 fw-bold css-active rounded-2" href="innerpage.html">
+          <img src="images/graph-active.svg" class="mb-1 me-1" height="22px" width="22px">
+          Analysis
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+          <img src="images/inbox-default.svg" class="mb-1 me-1" height="22px" width="22px">
+          Inbox
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+          <img src="images/clock-default.svg" class="mb-1 me-1" height="22px" width="22px">
+          History
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+          <img src="images/user-default.svg" class="mb-1 me-1" height="22px" width="22px">
+          Users
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+          <img src="images/maintenance-default.svg" class="mb-1 me-1" height="22px" width="22px">
+          Maintenance
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black side-nav-hover fs-6 w-100 m-3 fw-semibold rounded-2" href="#">
+          <img src="images/setting-default.svg" height="22px" class="mb-1" width="22px">
+          Setting
+        </a>
+      </li>
+    </ul>
+  </aside>
+ 
+  <!-- Content -->
+  <main class="content-area" style="margin-top: 70px;">
+    <div class="container-fluid p-3 p-md-4">
+      <h2 class="mb-4 mb-md-5 pt-3 fw-bold">Analysis</h2>
+ 
+      <form class="mt-3">
+        <!-- One Column Section -->
+        <div class="mb-5">
+          <h4 class="mb-3 fw-bold">One Column</h4>
+         
+          <div class="form-outline mb-4" data-mdb-input-init>
+            <input type="text" id="name1" class="form-control form-control-lg"/>
+            <label class="form-label text-secondary" for="name1">Name</label>
+          </div>
+ 
+          <select class="form-select mb-4 form-select-lg">
+            <option selected class="text-danger">Dropdown</option>
+            <option value="1">Option One</option>
+            <option value="2">Option Two</option>
+          </select>
+ 
+          <div class="form-outline mb-4" data-mdb-input-init>
+            <textarea class="form-control form-control-lg" id="textArea1" rows="4"></textarea>
+            <label class="form-label" for="textArea1">Multiple line</label>
+          </div>
         </div>
+ 
+        <!-- Two Column Section -->
+        <div class="mb-5">
+          <h4 class="mb-3 fw-bold">Two Column</h4>
+          <div class="row g-3 g-md-5">
+            <div class="col-12 col-md-6">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="nameCol1" class="form-control form-control-lg" />
+                <label class="form-label" for="nameCol1">Name</label>
+              </div>
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="password" id="passCol1" class="form-control form-control-lg" />
+                <label class="form-label" for="passCol1">Password</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="nameCol2" class="form-control form-control-lg" />
+                <label class="form-label" for="nameCol2">User Name</label>
+              </div>
+              <select class="form-select mb-4 form-select-lg">
+                <option selected>Dropdown</option>
+                <option value="1">Selection A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Three Column Section -->
+        <div class="mb-5">
+          <h4 class="mb-3 fw-bold">Three Column</h4>
+          <div class="row g-3 g-md-4">
+            <div class="col-12 col-md-4">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="focus" class="form-control form-control-lg" />
+                <label class="form-label" for="focus">Focus</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="password" id="passCol3" class="form-control form-control-lg" />
+                <label class="form-label" for="passCol3">Password</label>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="disable" class="form-control bg-white form-control-lg" style="border: 2px dotted gray;z-index: 0;" value="John Doe" disabled/>
+                <label class="form-label z-1 bg-white" for="disable">Disabled</label>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Four Column Section -->
+        <div class="mb-5">
+          <h4 class="mb-3 fw-bold">Four Column</h4>
+          <div class="row g-3 g-md-5">
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="designation" class="form-control form-control-lg" />
+                <label class="form-label" for="designation">Designation</label>
+                <div class="invalid-feedback">Enter valid data</div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="namecol4" class="form-control form-control-lg" />
+                <label class="form-label" for="namecol4">Name</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <div class="form-outline mb-4" data-mdb-input-init>
+                <input type="text" id="nameCol4" class="form-control form-control-lg" />
+                <label class="form-label" for="nameCol4">Username</label>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+              <select class="form-select mb-4 form-select-lg">
+                <option selected>Select</option>
+                <option value="1">Selection A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Other Elements -->
+        <div class="mb-5">
+          <h4 class="fw-bold mt-2 mb-4">Other Design Elements</h4>
+         
+          <!-- File Upload -->
+          <div class="mb-4">
+            <h5 class="mb-3">File Upload</h5>
+            <div class="file-upload-wrapper fw-bold">
+              <input type="file" id="customFile" class="hidden-input" hidden />
+              <label class="btn btn-outline-danger btn-rounded fw-bold" for="customFile">
+                <img src="images/cloud-upload-icon.svg" height="25px" width="25px"> Upload
+              </label>
+              <span id="file-chosen" class="ms-2 text-secondary fw-normal d-block d-sm-inline mt-2 mt-sm-0">No items selected</span>
+            </div>
+          </div>
+ 
+          <!-- Radio Buttons -->
+          <div class="mb-4">
+            <h5 class="mb-3">Radio Button</h5>
+            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                <label class="form-check-label" for="exampleRadios1">Option 1</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                <label class="form-check-label" for="exampleRadios2">Option 2</label>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Checkboxes -->
+          <div class="mb-4">
+            <h5 class="mb-3">Checkbox</h5>
+            <div class="d-flex flex-column flex-sm-row gap-3 gap-sm-4">
+              <div class="form-check">
+                <input class="form-check-input bg-danger" type="checkbox" value="" id="defaultCheck1" disabled checked>
+                <label class="form-check-label" for="defaultCheck1">Option 1</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input bg-danger" type="checkbox" value="" id="defaultCheck2" checked>
+                <label class="form-check-label" for="defaultCheck2">Option 2</label>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Snackbar -->
+          <div class="mb-4">
+            <h5 class="mb-3">Snackbar</h5>
+            <div class="row g-3">
+              <div class="col-12 col-lg-6">
+                <div class="alert alert-danger bg-white border-danger border-1 border p-2" role="alert">
+                  <a href="#" class="alert-link fw-medium" style="color: #FF3535;">
+                    <img src="images/error-icon.svg" height="20px" width="20px">
+                    This is an error Message
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="alert alert-primary bg-white border-info border-1 border p-2" role="alert">
+                  <a href="#" class="alert-link fw-medium" style="color: #00B9E1;">
+                    <img src="images/info-icon.svg" height="20px" width="20px">
+                    This is an information message!
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="alert alert-warning bg-white border-warning border-1 border p-2" role="alert">
+                  <a href="#" class="alert-link fw-medium" style="color: #FFA800;">
+                    <img src="images/warning-icon.svg" height="20px" width="20px">
+                    This is a warning message!
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="alert alert-success bg-white border-success border-1 border p-2" role="alert">
+                  <a href="#" class="alert-link fw-medium" style="color: #00AF27;">
+                    <img src="images/success-icon.svg" height="20px" width="20px">
+                    This is a success message!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Call to Action -->
+          <div class="mb-4">
+            <h5 class="mb-3">Call to action</h5>
+            <div class="d-flex flex-column flex-sm-row gap-3">
+              <button type="button" class="btn btn-danger rounded-pill px-4 py-2 fs-6">Primary</button>
+              <button type="button" class="btn btn-outline-danger rounded-pill px-4 py-2 fs-6">Secondary</button>
+            </div>
+          </div>
+ 
+          <!-- Tabs -->
+          <div class="mb-4">
+            <h5 class="mb-3">Tabs</h5>
+            <ul class="nav border-bottom pb-0">
+              <li class="nav-item">
+                <a class="nav-link fw-bold px-3 pb-3 nav-hover" style="color: #ADADAD;" href="innerpage.html">Tab 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold px-3 pb-3 nav-hover" style="color: #ADADAD;" href="innerpage.html">Tab 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold px-3 pb-3 nav-hover" style="color: #ADADAD;" href="innerpage.html">Tab 3</a>
+              </li>
+            </ul>
+          </div>
+ 
+          <!-- Content -->
+          <div class="mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure dolorem a libero voluptate et dolor, saepe voluptatum reprehenderit temporibus voluptas fugiat cupiditate in quia quo eos eaque ullam perspiciatis beatae!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius voluptatibus expedita ex voluptates labore ad perspiciatis, repellat vero aliquam corporis ducimus, quasi deleniti sunt? Obcaecati eius temporibus quaerat omnis voluptatem!
+          </div>
+        </div>
+      </form>
     </div>
+  </main>
+  <script src="js/bootstrap.bundle.min.js"></script>
+ 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  <script>
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const sidebar = document.getElementById('sidebar');
+   
+    sidebarToggle.addEventListener('click', function() {
+      sidebar.classList.toggle('show');
+    });
+   
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+      if (window.innerWidth < 992) {
+        if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+          sidebar.classList.remove('show');
+        }
+      }
+    });
+ 
+    // File upload display
+    const fileInput = document.getElementById('customFile');
+    const fileChosen = document.getElementById('file-chosen');
+   
+    fileInput.addEventListener('change', function() {
+      fileChosen.textContent = this.files[0] ? this.files[0].name : 'No items selected';
+    });
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+    //active tab
+  const tabs = document.querySelectorAll('.nav-hover');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function(e) {
+     
+       e.preventDefault(); 
+
+      // 1. Remove 'active' class from all tabs
+      tabs.forEach(t => t.classList.remove('active'));
+
+      // 2. Add 'active' class to the clicked tab
+      this.classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
